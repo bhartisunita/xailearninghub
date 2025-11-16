@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — XAI Learning Hub</title>
+  <meta name="description" content="About XAI Learning Hub — mission, instructor Sunita Nandi, corporate training and contact." />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, Arial; margin:0; background:#f8fafc; color:#0f172a; }
+    .container-max { max-width:1100px; margin:0 auto; padding:0 1rem; }
+    header { background:#fff; border-bottom:1px solid rgba(2,6,23,0.06); position:sticky; top:0; z-index:40; }
+    .card { background:#fff; border-radius:10px; padding:1.25rem; border:1px solid rgba(15,23,42,0.06); box-shadow:0 10px 30px rgba(2,6,23,0.04); }
+    h1,h2 { font-weight:700; }
+    .muted { color:#64748b; }
+
+    /* Social Icons Styling */
+    .social-row { display:flex; justify-content:center; gap:14px; margin-bottom:1rem; align-items:center; }
+    .social-btn { width:48px; height:48px; border-radius:12px; display:inline-flex; align-items:center; justify-content:center; transition:transform .14s ease, box-shadow .14s ease; position:relative; color:white; text-decoration:none; }
+    .social-icon { width:22px; height:22px; display:block; }
+    .social-tooltip { position:absolute; bottom: calc(100% + 10px); left:50%; transform: translateX(-50%) translateY(6px); background: rgba(15,23,42,0.92); color:white; padding:6px 8px; border-radius:6px; font-size:12px; white-space:nowrap; opacity:0; transition:opacity .12s, transform .12s; pointer-events:none; }
+
+    .social-btn:hover .social-tooltip,
+    .social-btn:focus .social-tooltip { opacity:1; transform:translateX(-50%) translateY(0); }
+
+    .s-fb { background:#1877F2; }
+    .s-ig { background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af); }
+    .s-x { background:#1DA1F2; }
+    .s-wa { background:#25D366; }
+    .s-yt { background:#FF0000; }
+    .s-ln { background:#0A66C2; }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position:fixed; bottom:22px; right:20px; width:56px; height:56px;
+      border-radius:50%; background:#25D366; display:flex; justify-content:center;
+      align-items:center; font-size:26px; color:white; text-decoration:none;
+      box-shadow:0 8px 25px rgba(0,0,0,0.2); transition:0.2s;
+    }
+    .whatsapp-float:hover { transform:translateY(-4px); box-shadow:0 14px 36px rgba(0,0,0,0.3); }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container-max flex justify-between items-center h-20">
+    <a href="index.html" class="text-lg font-semibold">
+      <span style="background:linear-gradient(90deg,#4f46e5,#06b6d4); -webkit-background-clip:text; color:transparent;">XAI</span>
+      <span style="color:#0f4b9e;">Learning Hub</span>
+    </a>
+
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="about.html" class="font-semibold">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button id="menuBtn" class="md:hidden p-2 border rounded">☰</button>
+  </div>
+
+  <div id="mobileNav" class="hidden md:hidden bg-white border-t px-4 py-3">
+    <a class="block py-1" href="index.html">Home</a>
+    <a class="block py-1" href="courses.html">Courses</a>
+    <a class="block py-1" href="about.html">About</a>
+    <a class="block py-1" href="#contact">Contact</a>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="container-max py-12">
+  <div class="grid lg:grid-cols-3 gap-8">
+
+    <!-- Mission + Sunita Bio -->
+    <section class="lg:col-span-2 space-y-8">
+
+      <!-- Mission -->
+      <div class="card">
+        <h1 class="text-2xl font-bold">Our Mission</h1>
+        <p class="mt-3 text-sm text-gray-600">
+          At XAI Learning Hub, our mission is to make Cloud, Data, and Machine Learning education
+          clear, practical, and accessible to every learner. We combine real-world engineering
+          experience with structured teaching to help students gain skills that matter in industry.
+        </p>
+
+        <ul class="mt-4 text-sm text-gray-700 space-y-2">
+          <li>• Teach industry-ready skills with real practical examples</li>
+          <li>• Simplify complex ML, cloud, and data concepts for faster learning</li>
+          <li>• Empower learners with hands-on skills, not just theory</li>
+          <li>• Prepare professionals for certification and real job roles</li>
+          <li>• Create training that respects learners’ time — focused and non-repetitive</li>
+        </ul>
+      </div>
+
+      <!-- About Sunita -->
+      <div class="card">
+        <h2 class="text-xl font-bold mb-3">About the Instructor — Sunita Nandi</h2>
+
+        <p class="text-sm text-gray-700 leading-relaxed">
+          Sunita Nandi is a seasoned Database, Cloud, and Machine Learning Engineer with deep expertise
+          in designing, building, and scaling real-world AI and data-driven systems. She specializes in AWS
+          Machine Learning technologies, large-scale data processing, model optimization, and complete
+          end-to-end deployment workflows.
+        </p>
+
+        <p class="text-sm text-gray-700 leading-relaxed mt-3">
+          With over 20 years of experience across software engineering, databases, cloud architecture,
+          and ML operations, Sunita brings a strong industry-focused and practical perspective to her
+          training programs. She has delivered multiple automations and modernization initiatives using
+          the latest cloud and AI technologies, enabling organizations to improve efficiency and reliability.
+        </p>
+
+        <p class="text-sm text-gray-700 leading-relaxed mt-3">
+          Her professional strengths include:
+        </p>
+
+        <ul class="text-sm text-gray-700 space-y-2 mt-2">
+          <li>• Database Engineering, Cloud Computing, Automations, AI & Machine Learning</li>
+          <li>• Architecting ML systems that are scalable, reliable, and cost-efficient</li>
+          <li>• Implementing SageMaker pipelines, tuning, registry, CI/CD & deployment automation</li>
+          <li>• Building secure, high-performance cloud-native applications on AWS</li>
+          <li>• Database performance tuning & Oracle GoldenGate replication optimization</li>
+          <li>• Mentoring engineers for AWS ML Specialty & Cloud certifications</li>
+        </ul>
+
+        <p class="text-sm text-gray-700 leading-relaxed mt-3">
+          Sunita is known for her clear, structured teaching style and her ability to simplify complex
+          technical topics into practical, actionable steps. Her learners consistently describe her training as
+          hands-on, confidence-building, and industry-ready.
+        </p>
+
+        <p class="text-sm text-gray-700 leading-relaxed mt-3">
+          Through XAI Learning Hub, she is committed to making Cloud and AI education accessible,
+          practical, and career-transforming for students, engineers, and organizations worldwide.
+        </p>
+
+        <p class="mt-4 text-sm">
+          <strong>LinkedIn:</strong>
+          <a href="https://www.linkedin.com/in/sunita-nandi" target="_blank" class="text-indigo-600">
+            Sunita Nandi
+          </a>
+        </p>
+      </div>
+
+      <!-- Corporate Training -->
+      <div class="card">
+        <h2 class="text-xl font-bold mb-3">Corporate & Team Training</h2>
+
+        <p class="text-sm text-gray-600">
+          We offer end-to-end training programs tailored for teams, colleges, and organizations:
+        </p>
+
+        <ul class="mt-3 space-y-2 text-sm text-gray-700">
+          <li>• Upskill teams in AI/ML and Cloud Computing</li>
+          <li>• Adopt best practices for AWS ML workflows</li>
+          <li>• Prepare teams for AWS ML Specialty & cloud certifications</li>
+          <li>• Modernize legacy systems with cloud-native ML pipelines</li>
+          <li>• Offline classroom sessions for colleges & institutions</li>
+          <li>• Special discounted pricing for group batches (20+ students)</li>
+        </ul>
+
+        <p class="mt-4 text-sm">
+          Contact: <a href="mailto:info@xailearninghub.com" class="text-indigo-600">info@xailearninghub.com</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Right Side Quick Contact -->
+    <aside class="space-y-8">
+      <div class="card text-sm">
+        <h3 class="font-semibold">Quick Contact</h3>
+        <p class="mt-3 text-gray-700"><strong>Email:</strong> info@xailearninghub.com</p>
+        <p class="mt-1 text-gray-700"><strong>Phone:</strong> +91 XXXXXXXXXX</p>
+        <p class="mt-1 text-gray-700"><strong>WhatsApp:</strong> +91 XXXXXXXXXX</p>
+      </div>
+
+      <div class="card text-sm">
+        <h3 class="font-semibold">Why XAI Learning Hub?</h3>
+        <ul class="mt-3 space-y-2 text-gray-600">
+          <li>• Hands-on labs & practical examples</li>
+          <li>• Structured for working professionals</li>
+          <li>• Industry-focused, exam-ready content</li>
+          <li>• Clear explanations with no repetition</li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer style="background:#0f172a; color:#cbd5e1; padding:30px 0;">
+  <div class="container-max text-center">
+
+    <!-- Social Icons -->
+    <div class="social-row">
+      <a class="social-btn s-fb" href="https://facebook.com" target="_blank">
+        <svg class="social-icon" fill="white" viewBox="0 0 24 24"><path d="M22.7 0H1.3C.6 0 0 .6 0 1.3v21.3C0 23.4.6 24 1.3 24H12v-9.3H9.2v-3.6H12V8.4c0-2.8 1.7-4.4 4.2-4.4 1.2 0 2.4.1 2.7.1v3h-1.9c-1.5 0-1.9.7-1.9 1.8v2.4h3.7l-.5 3.6h-3.2V24h6.2c.7 0 1.3-.6 1.3-1.3V1.3C24 .6 23.4 0 22.7 0z"/></svg>
+        <span class="social-tooltip">Facebook</span>
+      </a>
+
+      <a class="social-btn s-ig" href="https://instagram.com" target="_blank">
+        <svg class="social-icon" viewBox="0 0 24 24">
+          <defs><linearGradient id="igGrad" x1="0" x2="1" y1="1" y2="0">
+            <stop offset="0%" stop-color="#f58529"/><stop offset="50%" stop-color="#dd2a7b"/><stop offset="100%" stop-color="#8134af"/></linearGradient></defs>
+          <path fill="url(#igGrad)" d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.3 2.4.5.6.2 1 .6 1.4 1.1.4.5.8.9 1.1 1.4.2.5.4 1.2.5 2.4.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.9-.5 2.4-.2.6-.6 1-1.1 1.4-.5.4-.9.8-1.4 1.1-.5.2-1.2.4-2.4.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.3-2.4-.5-.6-.2-1-.6-1.4-1.1-.4-.5-.8-.9-1.1-1.4-.2-.5-.4-1.2-.5-2.4C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.9.5-2.4.2-.6.6-1 1.1-1.4.5-.4.9-.8 1.4-1.1.5-.2 1.2-.4 2.4-.5 1.3-.1 1.7-.1 4.9-.1z"/>
+        </svg>
+        <span class="social-tooltip">Instagram</span>
+      </a>
+
+      <a class="social-btn s-x" href="https://twitter.com" target="_blank">
+        <svg class="social-icon" fill="white" viewBox="0 0 24 24">
+          <path d="M22.2 0H1.8A1.8 1.8 0 000 1.8v20.4A1.8 1.8 0 001.8 24h20.4A1.8 1.8 0 0024 22.2V1.8A1.8 1.8 0 0022.2 0zM7.1 19.3H3.7V9h3.4v10.3zM5.4 7.7A2 2 0 115.4 3a2 2 0 010 4.1zm14 11.6h-3.4v-5.6c0-1.3-.5-2.1-1.6-2.1-1 0-1.6.7-1.6 2v5.6h-3.4V9h3.3v1.4h.1c.5-.9 1.8-1.9 3.3-1.9 2.2 0 3.3 1.4 3.3 4.2v6.6z"/>
+        </svg>
+        <span class="social-tooltip">Twitter</span>
+      </a>
+
+      <a class="social-btn s-wa" href="https://wa.me/91XXXXXXXXXX" target="_blank">
+        <svg class="social-icon" fill="white" viewBox="0 0 24 24">
+          <path d="M20.52 3.48A11.84 11.84 0 0012.04.5C6.02.5 1.18 5.34 1.18 11.36c0 2.02.56 3.89 1.62 5.52L.5 23.5l6.94-2.02A11.86 11.86 0 0012.04 22c6.02 0 10.86-4.84 10.86-10.86 0-2.92-1.14-5.66-3.38-7.66z"/>
+          <path d="M17.32 14.07c-.28-.14-1.66-.82-1.92-.91-.26-.09-.45-.14-.64.14-.19.28-.73.92-.9 1.11-.16.19-.33.21-.61.07-.28-.14-1.14-.42-2.17-1.34-.8-.71-1.33-1.59-1.48-1.84-.15-.25-.02-.38.11-.51.12-.12.28-.3.42-.45.14-.15.18-.25.26-.41.07-.16.03-.31-.02-.43-.05-.12-.43-1.04-.59-1.42-.16-.37-.32-.32-.47-.33-.15-.01-.31-.01-.48-.01-.16 0-.38.06-.56.28-.18.22-.67.74-.67 1.77 0 1.03.6 2.24.69 2.43.09.19 1.56 2.53 3.98 3.48.46.18.87.29 1.18.37.48.15.93.13 1.28.08.39-.06 1.18-.5 1.36-1.01.18-.51.18-.9.12-1 .06-.1.02-.18-.22-.31z"/>
+        </svg>
+        <span class="social-tooltip">WhatsApp</span>
+      </a>
+
+      <a class="social-btn s-yt" href="https://youtube.com" target="_blank">
+        <svg class="social-icon" fill="white" viewBox="0 0 24 24">
+          <path d="M23.5 6.2s-.2-1.7-.9-2.4c-.8-.9-1.7-.9-2.1-1C16.6 2.5 12 2.5 12 2.5s-4.6 0-8.5.3c-.4.1-1.3.1-2.1 1-.7.7-.9 2.4-.9 2.4S0 8.1 0 10v2c0 1.9.5 3.8.5 3.8s.2 1.7.9 2.4c.8.9 1.8.9 2.2 1C7.4 19.5 12 19.5 12 19.5s4.6 0 8.5-.3c.4-.1 1.3-.1 2.1-1 .7-.7.9-2.4.9-2.4s.5-1.9.5-3.8v-2c0-1.9-.5-3.8-.5-3.8zM9.5 14.5v-5l5.8 2.5-5.8 2.5z"/>
+        </svg>
+        <span class="social-tooltip">YouTube</span>
+      </a>
+
+      <a class="social-btn s-ln" href="https://linkedin.com" target="_blank">
+        <svg class="social-icon" fill="white" viewBox="0 0 24 24">
+          <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4v14h-4V8zm7 0h3.8v1.9h.1c.5-.9 1.7-2 3.6-2 3.8 0 4.5 2.5 4.5 5.7V22h-4v-6.3c0-1.5 0-3.5-2.1-3.5-2.1 0-2.4 1.6-2.4 3.4V22h-4V8z"/>
+        </svg>
+        <span class="social-tooltip">LinkedIn</span>
+      </a>
+    </div>
+
+    <p style="color:#94a3b8;font-size:13px;">© <span id="yr"></span> XAILearningHub — XAI Learning Hub</p>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" aria-label="Chat on WhatsApp">💬</a>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  document.getElementById('menuBtn').onclick = () => {
+    document.getElementById('mobileNav').classList.toggle('hidden');
+  };
+</script>
+
+</body>
+</html>

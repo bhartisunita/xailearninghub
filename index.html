@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>XAI Learning Hub — Home</title>
+  <meta name="description" content="XAI Learning Hub — AWS certification courses and DB training." />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root{
+      --fg:#0f172a;
+      --muted:#64748b;
+      --brand1:#4f46e5;
+      --brand2:#06b6d4;
+    }
+    body{font-family:'Inter',system-ui;color:var(--fg);background:#f8fafc;margin:0;}
+    .container-max{max-width:1100px;margin:0 auto;padding:0 1rem;}
+    .hero-bg{
+      width:100%;height:70vh;max-height:800px;
+      background-size:cover;background-position:center 30%;background-repeat:no-repeat;
+    }
+    .overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,6,23,0.3),rgba(2,6,23,0.55)60%);}
+    .btn-primary{
+      background:linear-gradient(90deg,var(--brand1),var(--brand2));
+      color:#fff;padding:0.7rem 1.2rem;border-radius:8px;font-weight:600;text-decoration:none;
+    }
+    .btn-ghost{
+      border:1px solid rgba(255,255,255,0.25);color:#fff;padding:0.6rem 1rem;border-radius:8px;font-weight:600;text-decoration:none;
+    }
+    .plat-card{background:#fff;border-radius:10px;padding:1rem;display:flex;align-items:center;gap:1rem;
+      border:1px solid rgba(15,23,42,0.06);box-shadow:0 8px 20px rgba(2,6,23,0.04);}
+    .plat-icon{width:56px;height:56px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;}
+    .plat-aws{background:#ff9900;}
+    .plat-db{background:#10b981;}
+    .highlight-card{background:#fff;border-radius:8px;padding:1rem;text-align:center;border:1px solid rgba(15,23,42,0.06);}
+    .footer { background:#0f172a; color:#cbd5e1; padding-top:28px; padding-bottom:28px; }
+
+    /* Social icons helpers (colorful round icons, tooltips, hover glow) */
+    .social-row { display:flex; justify-content:center; gap:14px; margin-bottom:1rem; align-items:center; }
+    .social-btn {
+      width:48px; height:48px; border-radius:12px;
+      display:inline-flex; align-items:center; justify-content:center;
+      text-decoration:none; color:white; transition:transform .14s ease, box-shadow .14s ease;
+      position:relative; outline: none;
+    }
+    .social-icon { width:22px; height:22px; display:block; }
+
+    /* Tooltip */
+    .social-tooltip {
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%) translateY(6px);
+      background: rgba(15,23,42,0.92);
+      color: white;
+      padding:6px 8px;
+      border-radius:6px;
+      font-size:12px;
+      white-space:nowrap;
+      opacity:0;
+      pointer-events:none;
+      transition: opacity .12s ease, transform .12s ease;
+      z-index: 60;
+    }
+    .social-btn:hover .social-tooltip,
+    .social-btn:focus .social-tooltip,
+    .social-btn[data-tooltip-visible="true"] .social-tooltip {
+      opacity:1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Brand backgrounds + glow colors */
+    .s-fb { background: #1877F2; box-shadow: 0 6px 18px rgba(24,119,242,0.16); }
+    .s-ig { background: linear-gradient(45deg,#f58529 0%,#dd2a7b 50%,#8134af 100%); box-shadow:0 6px 18px rgba(221,42,123,0.12); }
+    .s-x  { background: #1DA1F2; box-shadow:0 6px 18px rgba(29,161,242,0.14); }
+    .s-wa { background: #25D366; box-shadow:0 6px 18px rgba(37,211,102,0.12); }
+    .s-yt { background: #FF0000; box-shadow:0 6px 18px rgba(255,0,0,0.14); }
+    .s-ln { background: #0A66C2; box-shadow:0 6px 18px rgba(10,102,194,0.14); }
+
+    .s-fb:hover { box-shadow: 0 12px 36px rgba(24,119,242,0.22); transform: translateY(-6px); }
+    .s-ig:hover { box-shadow: 0 12px 36px rgba(221,42,123,0.22); transform: translateY(-6px); }
+    .s-x:hover  { box-shadow: 0 12px 36px rgba(29,161,242,0.22); transform: translateY(-6px); }
+    .s-wa:hover { box-shadow: 0 12px 36px rgba(37,211,102,0.22); transform: translateY(-6px); }
+    .s-yt:hover { box-shadow: 0 12px 36px rgba(255,0,0,0.22); transform: translateY(-6px); }
+    .s-ln:hover { box-shadow: 0 12px 36px rgba(10,102,194,0.22); transform: translateY(-6px); }
+
+    @media (max-width:420px) {
+      .social-tooltip { font-size:11px; padding:5px 7px; }
+    }
+
+    /* Floating WhatsApp styles (kept as before) */
+    .whatsapp-float{position:fixed;right:20px;bottom:22px;z-index:9999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;color:white;font-size:26px;box-shadow:0 8px 25px rgba(0,0,0,0.2);text-decoration:none;}
+    .whatsapp-float:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(0,0,0,0.25);}
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="bg-white sticky top-0 z-40 border-b">
+    <div class="container-max flex justify-between items-center h-20">
+      <a href="index.html" class="text-lg font-semibold">
+        <span style="background:linear-gradient(90deg,var(--brand1),var(--brand2));-webkit-background-clip:text;color:transparent;">XAI</span>
+        <span style="color:#0f4b9e;">Learning Hub</span>
+      </a>
+
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="index.html">Home</a>
+        <a href="courses.html" class="font-medium">Courses</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button id="mobileBtn" class="md:hidden p-2 border rounded">☰</button>
+    </div>
+
+    <div id="mobileNav" class="hidden md:hidden bg-white border-t px-4 py-3 flex flex-col gap-2">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="about.html">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative" aria-label="Hero">
+    <div class="hero-bg" style="background-image:url('assets/images/hero-ai-universe.png');"></div>
+    <div class="overlay" aria-hidden="true"></div>
+
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white max-w-3xl px-4">
+      <div class="flex justify-center gap-4 mt-4">
+        <a href="courses.html" class="btn-primary">Explore Courses</a>
+        <a href="#contact" class="btn-ghost">Contact</a>
+      </div>
+      <div class="mt-4 text-white text-sm opacity-90">Focus on your effort — the results will follow.</div>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main class="container-max py-10">
+  <!-- PLATFORMS GRID (AWS only) -->
+<section class="grid md:grid-cols-1 gap-4 mb-8">
+  <div class="plat-card">
+    <div class="plat-icon plat-aws">AWS</div>
+    <div>
+      <div class="font-bold">Amazon Web Services</div>
+      <p class="text-sm text-gray-600">Explore AWS Certification and Cloud ML courses.</p>
+    </div>
+    <a href="courses.html" class="ml-auto btn-primary text-white px-3 py-1">Explore</a>
+  </div>
+</section>
+
+
+    <!-- HIGHLIGHTS -->
+    <section class="grid md:grid-cols-3 gap-4">
+      <div class="highlight-card">
+        <div class="font-bold">Exam-focused</div>
+        <p class="text-sm text-gray-600">Mapped to AWS exam blueprints.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="font-bold">Hands-on Labs</div>
+        <p class="text-sm text-gray-600">Build real-world skills.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="font-bold">Corporate & Offline</div>
+        <p class="text-sm text-gray-600">Custom training for teams.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section id="contact" class="mt-10">
+      <div class="flex flex-wrap justify-between items-center bg-white p-4 rounded-lg shadow">
+        <div>
+          <div class="font-bold text-lg">Need Offline or Corporate Training?</div>
+          <p class="text-sm text-gray-600">Email or WhatsApp us directly.</p>
+        </div>
+        <a href="mailto:info@xailearninghub.com" class="btn-primary mt-3 md:mt-0">Email Us</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container-max text-center">
+
+      <!-- CONTACT INFO -->
+      <div class="mb-6 flex flex-col items-center gap-2 text-sm" style="color:#cbd5e1;">
+        <div class="flex items-center gap-2">
+          <span>📧</span>
+          <a href="mailto:info@xailearninghub.com" style="color:inherit;text-decoration:none;">info@xailearninghub.com</a>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <span>📞</span>
+          <a href="tel:+91XXXXXXXXXX" style="color:inherit;text-decoration:none;">+91 XXXXXXXXXX</a>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <span>💬</span>
+          <a href="https://wa.me/91XXXXXXXXXX" target="_blank" style="color:inherit;text-decoration:none;">WhatsApp: +91 XXXXXXXXXX</a>
+        </div>
+      </div>
+
+      <!-- COLORFUL SOCIAL ICONS (round, brand colors, glow, tooltips) -->
+      <div class="social-row" role="navigation" aria-label="Follow us">
+        <!-- Facebook -->
+        <a class="social-btn s-fb" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" tabindex="0">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+            <path d="M22.7 0H1.3C.6 0 0 .6 0 1.3v21.3C0 23.4.6 24 1.3 24H12v-9.3H9.2v-3.6H12V8.4c0-2.8 1.7-4.4 4.2-4.4 1.2 0 2.4.1 2.7.1v3h-1.9c-1.5 0-1.9.7-1.9 1.8v2.4h3.7l-.5 3.6h-3.2V24h6.2c.7 0 1.3-.6 1.3-1.3V1.3C24 .6 23.4 0 22.7 0z"/>
+          </svg>
+          <span class="social-tooltip" role="status">Facebook</span>
+        </a>
+
+        <!-- Instagram -->
+        <a class="social-btn s-ig" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" tabindex="0">
+          <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <defs>
+              <linearGradient id="igGradFooter" x1="0" x2="1" y1="1" y2="0">
+                <stop offset="0%" stop-color="#f58529"/>
+                <stop offset="50%" stop-color="#dd2a7b"/>
+                <stop offset="100%" stop-color="#8134af"/>
+              </linearGradient>
+            </defs>
+            <path fill="url(#igGradFooter)" d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.3 2.4.5.6.2 1 .6 1.4 1.1.4.5.8.9 1.1 1.4.2.5.4 1.2.5 2.4.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.9-.5 2.4-.2.6-.6 1-1.1 1.4-.5.4-.9.8-1.4 1.1-.5.2-1.2.4-2.4.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.3-2.4-.5-.6-.2-1-.6-1.4-1.1-.4-.5-.8-.9-1.1-1.4-.2-.5-.4-1.2-.5-2.4C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.9.5-2.4.2-.6.6-1 1.1-1.4.5-.4.9-.8 1.4-1.1.5-.2 1.2-.4 2.4-.5 1.3-.1 1.7-.1 4.9-.1z"/>
+          </svg>
+          <span class="social-tooltip" role="status">Instagram</span>
+        </a>
+
+        <!-- Twitter -->
+        <a class="social-btn s-x" href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter" tabindex="0">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+            <path d="M22.2 0H1.8A1.8 1.8 0 000 1.8v20.4A1.8 1.8 0 001.8 24h20.4A1.8 1.8 0 0024 22.2V1.8A1.8 1.8 0 0022.2 0zM7.1 19.3H3.7V9h3.4v10.3zM5.4 7.7A2 2 0 115.4 3a2 2 0 010 4.1zm14 11.6h-3.4v-5.6c0-1.3-.5-2.1-1.6-2.1-1 0-1.6.7-1.6 2v5.6h-3.4V9h3.3v1.4h.1c.5-.9 1.8-1.9 3.3-1.9 2.2 0 3.3 1.4 3.3 4.2v6.6z"/>
+          </svg>
+          <span class="social-tooltip" role="status">Twitter</span>
+        </a>
+
+        <!-- WhatsApp -->
+        <a class="social-btn s-wa" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" aria-label="WhatsApp" tabindex="0">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+            <path d="M20.52 3.48A11.84 11.84 0 0012.04.5C6.02.5 1.18 5.34 1.18 11.36c0 2.02.56 3.89 1.62 5.52L.5 23.5l6.94-2.02A11.86 11.86 0 0012.04 22c6.02 0 10.86-4.84 10.86-10.86 0-2.92-1.14-5.66-3.38-7.66z"/>
+            <path d="M17.32 14.07c-.28-.14-1.66-.82-1.92-.91-.26-.09-.45-.14-.64.14-.19.28-.73.92-.9 1.11-.16.19-.33.21-.61.07-.28-.14-1.14-.42-2.17-1.34-.8-.71-1.33-1.59-1.48-1.84-.15-.25-.02-.38.11-.51.12-.12.28-.3.42-.45.14-.15.18-.25.26-.41.07-.16.03-.31-.02-.43-.05-.12-.43-1.04-.59-1.42-.16-.37-.32-.32-.47-.33-.15-.01-.31-.01-.48-.01-.16 0-.38.06-.56.28-.18.22-.67.74-.67 1.77 0 1.03.6 2.24.69 2.43.09.19 1.56 2.53 3.98 3.48.46.18.87.29 1.18.37.48.15.93.13 1.28.08.39-.06 1.18-.5 1.36-1.01.18-.51.18-.9.12-1 .06-.1.02-.18-.22-.31z"/>
+          </svg>
+          <span class="social-tooltip" role="status">WhatsApp</span>
+        </a>
+
+        <!-- YouTube -->
+        <a class="social-btn s-yt" href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube" tabindex="0">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+            <path d="M23.5 6.2s-.2-1.7-.9-2.4c-.8-.9-1.7-.9-2.1-1C16.6 2.5 12 2.5 12 2.5s-4.6 0-8.5.3c-.4.1-1.3.1-2.1 1-.7.7-.9 2.4-.9 2.4S0 8.1 0 10v2c0 1.9.5 3.8.5 3.8s.2 1.7.9 2.4c.8.9 1.8.9 2.2 1C7.4 19.5 12 19.5 12 19.5s4.6 0 8.5-.3c.4-.1 1.3-.1 2.1-1 .7-.7.9-2.4.9-2.4s.5-1.9.5-3.8v-2c0-1.9-.5-3.8-.5-3.8zM9.5 14.5v-5l5.8 2.5-5.8 2.5z"/>
+          </svg>
+          <span class="social-tooltip" role="status">YouTube</span>
+        </a>
+
+        <!-- LinkedIn -->
+        <a class="social-btn s-ln" href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" tabindex="0">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+            <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4v14h-4V8zm7 0h3.8v1.9h.1c.5-.9 1.7-2 3.6-2 3.8 0 4.5 2.5 4.5 5.7V22h-4v-6.3c0-1.5 0-3.5-2.1-3.5-2.1 0-2.4 1.6-2.4 3.4V22h-4V8z"/>
+          </svg>
+          <span class="social-tooltip" role="status">LinkedIn</span>
+        </a>
+      </div>
+
+      <div style="color:#94a3b8;font-size:13px;">© <span id="yr"></span> XAILearningHub — XAI Learning Hub</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent=new Date().getFullYear();
+
+    // Mobile nav toggle
+    document.getElementById('mobileBtn').onclick=()=>document.getElementById('mobileNav').classList.toggle('hidden');
+
+    // Accessibility: show tooltip on keyboard focus and hide on blur
+    document.querySelectorAll('.social-btn').forEach(btn => {
+      btn.addEventListener('focus', ()=> btn.setAttribute('data-tooltip-visible','true'));
+      btn.addEventListener('blur',  ()=> btn.removeAttribute('data-tooltip-visible'));
+    });
+  </script>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="whatsapp-float" aria-label="WhatsApp Chat">💬</a>
+
+</body>
+</html>
