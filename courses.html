@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>AWS Courses — XAI Learning Hub</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', system-ui;
+      background:#f8fafc;
+      margin:0;
+      color:#0f172a;
+    }
+
+    .container {
+      max-width:1100px;
+      margin:0 auto;
+      padding:1rem;
+    }
+
+    /* Grid and card layout */
+    .grid-courses {
+      display:grid;
+      gap:1rem;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      align-items: stretch;
+    }
+
+    .card {
+      background:#fff;
+      border-radius:10px;
+      padding:1rem;
+      border:1px solid rgba(15,23,42,0.08);
+      box-shadow:0 6px 14px rgba(0,0,0,0.05);
+      display:flex;
+      flex-direction:column;
+    }
+
+    .tag {
+      font-size:12px;
+      padding:0.25rem 0.6rem;
+      display:inline-block;
+      border-radius:999px;
+      font-weight:700;
+    }
+
+    /* Level color codes */
+    .tag-foundational { background:#dbeafe; color:#1e40af; }
+    .tag-associate    { background:#ecfccb; color:#4d7c0f; }
+    .tag-professional { background:#fee2e2; color:#991b1b; }
+    .tag-specialty    { background:#fff7ed; color:#92400e; }
+
+    .title {
+      margin-top:0.5rem;
+      font-size:1.05rem;
+      font-weight:600;
+    }
+
+    .desc {
+      margin-top:0.5rem;
+      font-size:0.95rem;
+      color:#475569;
+      line-height:1.45;
+    }
+
+    .btn-udemy {
+      background:#1d4ed8;
+      color:white;
+      padding:0.5rem 0.75rem;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      display:inline-block;
+    }
+
+    .btn-udemy:hover { background:#2563eb; }
+
+    .muted {
+      color:#64748b;
+      font-size:0.9rem;
+    }
+
+    .card-actions {
+      margin-top:auto;
+      display:flex;
+      gap:0.5rem;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .exam-link {
+      color:#0f4b9e;
+      font-weight:700;
+      text-decoration:none;
+    }
+    .exam-link:hover { text-decoration:underline; }
+
+    header{
+      background:#fff;
+      border-bottom:1px solid rgba(2,6,23,0.06);
+      position:sticky;
+      top:0;
+      z-index:40;
+    }
+
+    /* ------------------ MOBILE IMPROVEMENTS ------------------ */
+    @media (max-width: 640px) {
+      .container { padding:1rem; }
+
+      .grid-courses {
+        grid-template-columns: 1fr;
+        gap:0.75rem;
+      }
+
+      .card {
+        padding:0.9rem;
+        border-radius:12px;
+      }
+
+      .title { font-size:1.12rem; }
+      .desc  { font-size:0.98rem; }
+
+      .card-actions {
+        flex-direction:column;
+        align-items:stretch;
+      }
+
+      .btn-udemy {
+        width:100%;
+        padding:0.75rem;
+        font-size:1rem;
+        text-align:center;
+        border-radius:10px;
+      }
+
+      .card-actions .muted,
+      .card-actions .exam-link {
+        width:100%;
+        text-align:left;
+        padding-left:2px;
+      }
+
+      header .container {
+        padding-left:0.75rem;
+        padding-right:0.75rem;
+        height:64px;
+      }
+    }
+
+    /* Tablet optimizations */
+    @media (min-width:641px) and (max-width:1024px) {
+      .grid-courses { grid-template-columns:repeat(2, minmax(220px, 1fr)); }
+      .card { padding:1rem; }
+    }
+
+    .btn-udemy, .card-actions a {
+      -webkit-tap-highlight-color:rgba(0,0,0,0.05);
+      touch-action:manipulation;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container flex items-center justify-between h-20">
+      <a href="index.html" class="text-lg font-semibold">
+        <span style="background:linear-gradient(90deg,#4f46e5,#06b6d4); -webkit-background-clip:text; color:transparent;">XAI</span>
+        <span style="color:#0f4b9e;"> Learning Hub</span>
+      </a>
+
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="index.html">Home</a>
+        <a href="courses.html" class="font-medium">Courses</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container py-10">
+
+    <h1 class="text-2xl font-bold mb-4">AWS Certification & Practical Courses</h1>
+
+    <div class="p-4 mb-6 bg-indigo-50 border border-indigo-200 text-indigo-900 rounded-md text-sm">
+      <strong>Note:</strong>
+      Tap the exam code to go to the official AWS certification page.
+      Tap “Check on Udemy →” to learn more about the course.
+    </div>
+
+    <div id="coursesGrid" class="grid-courses" aria-live="polite"></div>
+
+  </main>
+
+  <script src="courses-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+[
+  {
+    "id": "aws-cloud-practitioner",
+    "title": "AWS Certified Cloud Practitioner (CLF-C02)",
+    "level": "Foundational",
+    "summary": "Foundational AWS cloud concepts, core services, security, pricing, and support — a recommended first step.",
+    "aws_link": "https://aws.amazon.com/certification/certified-cloud-practitioner/",
+    "udemy_url": "https://www.udemy.com/courses/search/?q=AWS%20Certified%20Cloud%20Practitioner"
+  },
+
+  {
+    "id": "aws-solutions-architect-associate",
+    "title": "AWS Certified Solutions Architect – Associate (SAA-C03)",
+    "level": "Associate",
+    "summary": "Designing fault-tolerant, cost-efficient, and scalable distributed systems on AWS.",
+    "aws_link": "https://aws.amazon.com/certification/certified-solutions-architect-associate/",
+    "udemy_url": "https://www.udemy.com/courses/search/?q=AWS%20Certified%20Solutions%20Architect%20Associate"
+  },
+
+  {
+    "id": "aws-developer-associate",
+    "title": "AWS Certified Developer – Associate (DVA-C02)",
+    "level": "Associate",
+    "summary": "Developing, deploying and debugging cloud applications; SDKs and CI/CD on AWS.",
+    "aws_link": "https://aws.amazon.com/certification/certified-developer-associate/",
+    "udemy_url": "https://www.udemy.com/courses/search/?q=AWS%20Certified%20Developer%20Associate"
+  },
+
+  {
+    "id": "aws-sysops-or-cloudops-associate",
+    "title": "AWS Certified SysOps Administrator / CloudOps Engineer – Associate",
+    "level": "Associate",
+    "summary": "Cloud operations, monitoring, incident management and administration (SysOps / CloudOps). Note: AWS has been transitioning SysOps to CloudOps — check AWS for current exam code and dates.",
+    "aws_link": "https://aws.amazon.com/certification/coming-soon/",
+    "udemy_url": "https://www.udemy.com/courses/search/?q=AWS%20SysOps%20Administrator%20Associate"
+  },
+
+  {
+    "id": "aws-data-engineer-associate",
+    "title": "AWS Certified Data Engineer – Associate (DEA-C01)",
+    "level": "Associate",
+    "summary": "Ingest, transform and orchestrate data pipelines using AWS data services (role-based data associate).",
+    "aws_link": "https://aws.amazon.com/certification/",
+    "udemy_url": "https://www.udemy.com/courses/search/?q=AWS%20Certified%20Data%20Engineer%20Associate"
+  },
+
+  {
+    "id": "aws-ml-engineer-associate",
+    "title": "AWS Certified Machine Learning Engineer – Associate (MLA-C01)",
+    "level": "Associate",
+    "summary": "Associate-level ML engineering knowledge: basic model building, evaluation and deployment patterns (role-specific associate).",
+    "aws_link": "https://aws.amazon.com/certification/",
+    "udemy_url": "https://www.udemy.com/courses/search/?q=AWS%20Machine%20Learning%20Associate"
+  },
+
+  {
+    "id": "aws-solutions-architect-professional",
+    "title": "AWS Certified Solutions Architect – Professional (SAP-C02)",
+    "level": "Professional",
+    "summary": "Advanced cloud architecture, migration, and optimization of complex solutions at scale.",
+    "aws_link": "https://aws.amazon.com/certification/certified-solutions-architect-professional/",
+    "udemy_url": "https://www.udemy.com/courses/search/?q=AWS%20Certified%20Solutions%20Architect%20Professional"
+  },
+
+  {
+    "id": "aws-devops-professional",
+    "title": "AWS Certified DevOps Engineer – Professional (DOP-C02)",
+    "level": "Professional",
+    "summary": "Automation, CI/CD, reliability engineering and operational excellence for AWS workloads.",
+    "aws_link": "https://aws.amazon.com/certification/certified-devops-engineer-professional/",
+    "udemy_url": "https://www.udemy.com/courses/search/?q=AWS%20Certified%20DevOps%20Engineer%20Professional"
+  },
+
+  {
+    "id": "aws-ml-specialty",
+    "title": "AWS Certified Machine Learning – Specialty (MLS-C01)",
+    "level": "Specialty",
+    "summary": "Building, training, tuning and deploying machine learning models and end-to-end ML pipelines on AWS. (Note: AWS shows retirement timelines for some specialty exams; check official AWS page for updates.)",
+    "aws_link": "https://aws.amazon.com/certification/certified-machine-learning-specialty/",
+    "udemy_url": "https://www.udemy.com/courses/search/?q=AWS%20Certified%20Machine%20Learning%20Specialty"
+  },
+
+  {
+    "id": "aws-security-specialty",
+    "title": "AWS Certified Security – Specialty (SCS-C02)",
+    "level": "Specialty",
+    "summary": "Designing and implementing security controls, data protection, and governance on AWS.",
+    "aws_link": "https://aws.amazon.com/certification/certified-security-specialty/",
+    "udemy_url": "https://www.udemy.com/courses/search/?q=AWS%20Certified%20Security%20Specialty"
+  },
+
+  {
+    "id": "aws-advanced-networking-specialty",
+    "title": "AWS Certified Advanced Networking – Specialty (ANS-C01)",
+    "level": "Specialty",
+    "summary": "Complex networking tasks, hybrid connectivity, and advanced AWS networking services.",
+    "aws_link": "https://aws.amazon.com/certification/certified-advanced-networking-specialty/",
+    "udemy_url": "https://www.udemy.com/courses/search/?q=AWS%20Certified%20Advanced%20Networking%20Specialty"
+  },
+
+  {
+    "id": "aws-data-analytics-specialty",
+    "title": "AWS Certified Data Analytics – Specialty (DAS-C01)",
+    "level": "Specialty",
+    "summary": "Designing and implementing analytics solutions using AWS data services (analytics & visualization pipelines).",
+    "aws_link": "https://aws.amazon.com/certification/certified-data-analytics-specialty/",
+    "udemy_url": "https://www.udemy.com/courses/search/?q=AWS%20Certified%20Data%20Analytics%20Specialty"
+  },
+
+  {
+    "id": "aws-database-specialty",
+    "title": "AWS Certified Database – Specialty (DBS-C01)",
+    "level": "Specialty",
+    "summary": "Designing, operating and optimizing AWS database solutions (relational, non-relational, and analytics DBs).",
+    "aws_link": "https://aws.amazon.com/certification/certified-database-specialty/",
+    "udemy_url": "https://www.udemy.com/courses/search/?q=AWS%20Certified%20Database%20Specialty"
+  },
+
+  {
+    "id": "aws-other",
+    "title": "Other / Role-based AWS Certifications",
+    "level": "Specialty",
+    "summary": "AWS periodically adds role-based and specialty certifications (e.g., cloud ops, generative AI dev, and role-specific associate certs). Check the official AWS Certification site for the latest additions & retirement notices.",
+    "aws_link": "https://aws.amazon.com/certification/",
+    "udemy_url": "https://www.udemy.com/courses/search/?q=AWS%20Certification"
+  }
+]
